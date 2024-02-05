@@ -1,39 +1,27 @@
-/*PROFE NO SUPE COMO VOLVER A REPREGUNTAR PARA QUE SE VUELVA A GENERAR EL CICLO, DE TODAS MANERAS QUERIA QUE QUEDE REGISTRADO EN TABLA TODAS LAS RE CONSULTAS DE DIVISAS*/
-let miArray = []
-function preguntar(){
-    let divisa = prompt("Ingrese Divisa a convertir en Ars")
-    if(divisa == "dolar"){
-        alert("Valor Ars 1130 " + divisa)
-        while(divisa == "dolar"){
-            miArray.push(divisa)
-            divisa = prompt("ingresa otra divisa o apretá cancelar para finalizar" )
-        }
-        console.table(miArray)
-    }if(divisa == "euro"){
-        alert("Valor Ars 1237.24 " + divisa)
-        while(divisa == "euro"){
-            miArray.push(divisa)
-            divisa = prompt("ingresa otra divisa o apretá cancelar para finalizar" )
-        }
-        console.table(miArray)
-    }if(divisa == "real"){
-        alert("Valor Ars 232.33 " + divisa)
-        while(divisa == "real"){
-            miArray.push(divisa)
-            divisa = prompt("ingresa otra divisa o apretá cancelar para finalizar" )
-        }
-        console.table(miArray)
-    }if(divisa == "yuan"){
-        alert("Valor Ars 158.61 " + divisa)
-        while(divisa == "yuan"){
-            miArray.push(divisa)
-            divisa = prompt("ingresa otra divisa o apretá cancelar para finalizar" )        
-        }
-        console.table(miArray)
-        }
-    }
-preguntar()
+const form = document.getElementById("#container")
+let dia = document.getElementById("dia")
+dia.addEventListener("input", () =>{
+    console.log(dia.value)
+})
+
+let mes = document.getElementById("mes")
+mes.addEventListener("input", () =>{
+    console.log(mes.value)
+})
+
+let descripcion = document.getElementById("descripcion")
+descripcion.addEventListener("input", () =>{
+    console.log(descripcion.value)
+})
 
 
+    const card = document.createElement("div")
+    card.classList.add("card")
+    card.innerHTML= `
+    <p>Tu día: ${dia} </p>
+    <p>Del mes: ${mes} </p>
+    <h4>Tenés lo siguiente: ${descripcion} </h4>
+    `
+    container.appendChild(card)
 
-
+/*Tuve que cambiar todo el codigo a ultimo momento, tenia todo con prompt y con boton, ahora no puedo hacer andar el form*/
